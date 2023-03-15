@@ -9,4 +9,5 @@ services:
     volumes:
       - ./src:/amazon-transcribe-streaming-sdk/src
     tty: true
-    command: python /amazon-transcribe-streaming-sdk/src/simple_file.py
+    ports:
+      - 5500:3000
