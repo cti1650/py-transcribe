@@ -1,3 +1,6 @@
 aiofile
 sounddevice
 pyaudio
+uvicorn
+fastapi
+uvicorn[standard]
