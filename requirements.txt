@@ -1,1 +1,3 @@
 aiofile
+sounddevice
+pyaudio
