@@ -4,6 +4,7 @@ EXPOSE 3000
 
 RUN apt-get update && apt-get install -y git && \
     apt-get install -y alsa-utils && \
+    apt-get install -y build-essential && \
     apt-get install -y portaudio19-dev
 
 COPY requirements.txt requirements.txt
@@ -18,4 +19,4 @@ RUN git clone https://github.com/awslabs/amazon-transcribe-streaming-sdk.git && 
     python setup.py install && \
     curl -fsSL https://get.deta.dev/cli.sh | sh
 
-ENTRYPOINT ["uvicorn", "amazon-transcribe-streaming-sdk.src.main:app", "--host", "0.0.0.0","--port", "3000", "--reload"]
+# ENTRYPOINT ["uvicorn", "amazon-transcribe-streaming-sdk.src.main:app", "--host", "0.0.0.0","--port", "3000", "--reload"]
